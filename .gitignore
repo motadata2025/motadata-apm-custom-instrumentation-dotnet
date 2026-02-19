@@ -1,0 +1,49 @@
+# Build output
+bin/
+obj/
+out/
+artifacts/
+[Dd]ebug/
+[Rr]elease/
+
+# NuGet artifacts and local cache
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Test and coverage output
+TestResults/
+coverage/
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+
+# Logs
+*.log
+[Ll]ogs/
+[Ll]og/
+
+# User and IDE-specific files
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userprefs
+*.userosscache
+*.sln.docstates
+*.code-workspace
+*.sln.iml
+
+# ReSharper / dotCover
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+*.dotCover
+
+# OS files
+.DS_Store
+Thumbs.db

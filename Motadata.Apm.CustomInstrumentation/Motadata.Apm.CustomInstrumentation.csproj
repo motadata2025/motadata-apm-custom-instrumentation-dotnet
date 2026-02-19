@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <!-- Target Frameworks: .NET Framework 4.6.2+ (Windows), .NET 8+ (Windows & Linux) -->
+        <TargetFrameworks>net462;net47;net48;net8.0;net9.0</TargetFrameworks>
+
+        <!-- Assembly Information -->
+        <RootNamespace>Motadata.Apm.CustomInstrumentation</RootNamespace>
+        <AssemblyName>Motadata.Apm.CustomInstrumentation</AssemblyName>
+        <AssemblyTitle>Motadata Custom Instrumentation</AssemblyTitle>
+
+        <!-- Language and Compiler Settings -->
+        <LangVersion>7.3</LangVersion>
+        <Nullable>disable</Nullable>
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);CS1591</NoWarn> <!-- Suppress missing XML comment warnings -->
+
+        <!-- Package Metadata -->
+        <PackageId>Motadata.Apm.CustomInstrumentation</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Motadata Engineering Team</Authors>
+        <Company>Motadata</Company>
+        <Product>Motadata APM Custom Instrumentation</Product>
+        <Description>Custom instrumentation utility for OpenTelemetry spans in .NET applications. Provides easy-to-use APIs for setting custom attributes on spans with automatic validation and type conversion. Supports .NET Framework 4.6.2+ (Windows) and .NET 8+ (Windows &amp; Linux).</Description>
+        <Copyright>Copyright (c) Motadata 2026. All rights reserved.</Copyright>
+
+        <!-- Package License -->
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+
+        <!-- Package URLs and Metadata -->
+        <PackageProjectUrl>https://www.motadata.com</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/motadata2025/motadata-apm-custom-instrumentation-dotnet</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>opentelemetry;apm;instrumentation;telemetry;observability;tracing;spans;monitoring;dotnet;netframework;net8;net9;windows;linux</PackageTags>
+        <PackageReleaseNotes>v1.0.0 - Custom instrumentation utility for OpenTelemetry spans. Supports .NET Framework 4.6.2+ (Windows) and .NET 8+ (Windows &amp; Linux).</PackageReleaseNotes>
+
+        <!-- Package README -->
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+
+        <!-- Package License File -->
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+        <!-- Build Settings -->
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <Deterministic>true</Deterministic>
+        <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <!-- Package Dependencies -->
+    <ItemGroup>
+        <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.0" />
+    </ItemGroup>
+
+    <!-- .NET Framework specific dependencies -->
+    <ItemGroup Condition="'$(TargetFramework)' == 'net462' OR '$(TargetFramework)' == 'net47' OR '$(TargetFramework)' == 'net48'">
+        <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    </ItemGroup>
+
+    <!-- Source Link for debugging (optional but recommended) -->
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    </ItemGroup>
+
+    <!-- Include README and LICENSE in package -->
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+        <None Include="..\CHANGELOG.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+</Project>
