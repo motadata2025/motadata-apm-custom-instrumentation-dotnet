@@ -38,8 +38,6 @@ Motadata APM Custom Instrumentation helps you attach business context to traces 
   - .NET `8+` (Windows/Linux)
   - .NET Framework `4.6.2+` (Windows)
 - Motadata APM agent (auto-instrumented app)
-- OpenTelemetry span context available in runtime
-- Dependency: `System.Diagnostics.DiagnosticSource` `8.0.0+` (installed via NuGet)
 
 ---
 
