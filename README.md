@@ -3,10 +3,9 @@
 [![.NET](https://img.shields.io/badge/.NET-8%2B-blue.svg)](https://dotnet.microsoft.com/)
 [![.NET Framework](https://img.shields.io/badge/.NET%20Framework-4.6.2%2B-blue.svg)](https://dotnet.microsoft.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey.svg)](https://dotnet.microsoft.com/)
-[![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-Compatible-brightgreen.svg)](https://opentelemetry.io/)
 [![License](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
 
-A lightweight, enterprise-grade utility designed to simplify custom instrumentation for .NET applications using OpenTelemetry. Built as a seamless extension of Motadata Auto Instrumentation, it ensures custom attributes are validated, secure, and consistently namespaced.
+A lightweight, enterprise-grade utility designed to simplify custom instrumentation for .NET applications using Motadata Instrumentation. Built as a seamless extension of Motadata Auto Instrumentation, it ensures custom attributes are validated, secure, and consistently namespaced.
 
 ---
 
@@ -28,7 +27,7 @@ A lightweight, enterprise-grade utility designed to simplify custom instrumentat
 
 Motadata APM Custom Instrumentation helps you attach business context to traces without risking invalid attributes or inconsistent naming. Keys are automatically namespaced and normalized, inputs are validated, and the API is easy to adopt across .NET services.
 
-> **Prerequisite:** Instrument your app first with **[Motadata Auto Instrumentation](https://docs.motadata.com/motadata-aiops-docs/apm/apm-in-motadata/)** so `Activity.Current` span context is available.
+> **Prerequisite:** Instrument your app first with **[Motadata Auto Instrumentation](https://docs.motadata.com/motadata-aiops-docs/apm/apm-in-motadata/)** so span context is available.
 
 ---
 
@@ -37,7 +36,7 @@ Motadata APM Custom Instrumentation helps you attach business context to traces 
 - .NET targets:
   - .NET `8+` (Windows/Linux)
   - .NET Framework `4.6.2+` (Windows)
-- Motadata APM agent (auto-instrumented app)
+- Motadata Agent (8.1.2+)
 
 ---
 
